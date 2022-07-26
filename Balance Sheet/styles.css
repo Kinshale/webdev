@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #0a0a23;
+}
+
+span[class~="sr-only"] {
+    border: 0px !important;
+    height: 0px !important;
+    width: 0px !important;
+    position: absolute !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    background: red;
+}
+
+section {
+    max-width: 32rem;
+    margin: 1rem auto;
+    border: #959597 2px solid;
+}
+
+h1 {
+ display: flex;
+ flex-direction: column-reverse;
+ gap: 1rem;
+ padding: 1.5rem 1.25rem;
+}
+
+h1 span:first-child{
+    font-size: 0.7em;
+}
+
+h1 span:last-child{
+    font-size: 1.2em;
+}
+
+#years {
+    display: flex;
+    justify-content: flex-end;
+    background: #0a0a23;
+    color: #ffffff;
+    margin: 0 -2px;
+    padding: 0.5rem calc(0.75rem + 2px) 0.5rem 0;
+    position: sticky;
+    top: 0px;
+}
+
+#years > span {
+    width: 4.5rem;
+    font-weight: bold;
+    text-align: right;
+}
+.table-wrap{
+    padding: 0 0.75rem 0.75rem 0.75rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 3.25rem;
+    position: relative;
+}
+
+table caption {
+font-size: 1.5em;
+position: absolute;
+top: -2.5rem;
+color: blue;
+}
+
+tr.data {
+    background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+tr.data th {
+    text-align: left;
+    padding: 0.3rem 0rem 0.7rem 0.3rem;
+}
+
+tr.data th span {
+    display: block;
+    font-weight: normal;
+    font-style: italic;
+    padding-top: 1rem;
+    margin-right: -13.5rem;
+}
+
+tbody td {
+    text-align: right;
+    vertical-align: top;
+    width: 100vw;
+    max-width: 4.5rem;
+    min-width: 4.5rem;
+    padding-top: 0.3rem;
+}
