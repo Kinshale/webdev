@@ -20,7 +20,7 @@ body {
     position: absolute;
     background: #f8f8ff;
     top: 25%;
-    left: 15%; 
+    left: 7.5%; 
     width: 20rem;
     height: 40rem;
 }
@@ -65,10 +65,123 @@ body {
 }
 
 .eyes {
-    width: 2.5rem;
-    height: 1.2rem;
+    width: 3.5rem;
+    height: 2.2rem;
     border-radius: 20px 50%;
     background: #8b4513;
+}
+
+#tan-table {
+    background: #d2691e;
+    width: 45rem;
+    height: 14rem;
+    margin-left: -10px;
+    margin-top: 10px;
+}
+
+#black-character{   
+    background: rgb(54, 51, 51);
+    width: 18rem;
+    height: 35rem;
+    position: absolute;
+    right: 7.5%;
+    top: 8rem;
+}
+
+#black-hat{
+    border-color: rgb(54, 51, 51);
+    border-style: solid;
+    border-width: 0 18rem 8rem 0;
+    border-right-color: transparent;
+    margin-top: -8rem;
+}
+
+#gray-mask{
+    background: #a7a275;
+    width: 60%;
+    height: 8rem;
+    margin: -10px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#white-paper {
+    width: 24rem;
+    height: 5rem;
+    background: rgb(226, 201, 201);
+    position: absolute;
+    top: 25rem;
+    right: -1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 15%;
+}
+
+.fa-music {
+    color: blue;
+    font-size: 25px;
+}
+#guitar {
+    width: 20rem;
+    height: 6rem;
+    position: relative;
+    left: calc(50% - 10rem);
+    top: 22rem;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+
+.left-guitar, .right-guitar {
+position: absolute;
+ background: rgb(130, 130, 224);
+ width: 8rem;
+ height: 90%;
+ border-radius: 75%;
+}
+
+.right-guitar {
+    left: 6rem;
+}
+
+.guitar-neck {
+    position: absolute;
+    left: 9.5rem;
+    background-color: rgb(38, 85, 80);
+    width: 10rem;
+    height: 1.5rem; 
+    border-radius: 5px;
+}
+
+#triangles {
+    position: absolute;
+    top: 40%;
+    left:40%;
+    background: orange;
+    width: 15rem;
+    height: 35rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2px 2px;
+    grid-template-areas:
+        ". . . . ."
+        ". . . . ."
+        ". . . . ."
+        ". . . . ."
+        ". . . . ."
+        ". . . . .";
+    z-index: 0;
+}
+
+.triangle {
+    border-color: orangered;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-style: solid;
+    border-width: calc((35rem - 10px)/12) calc((15rem - 8px) / 5) calc(35rem/12) 0px;
 }
 /* color list:
  #8b4513; #2d1f13; eyes --> #8b4513; gray -->  #f8f8ff;
