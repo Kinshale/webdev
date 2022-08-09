@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 300px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.piano {
+    margin: 0 auto;
+    min-width: 580px;
+    height: auto;
+    background: rgb(25, 113, 116);
+    padding: 10px;
+    border: black 2px solid;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 0px;
+    grid-template-areas:
+    ". ."
+    "first-octave third-octave";
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+}
+
+.random-buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+
+.fa {
+font-size: 35px;
+margin-left: 10px;
+}
+
+.octave {
+    width: 280px;
+    height: 130px;
+    display: flex;
+}
+
+.octave.first {
+    grid-area: first-octave;
+}
+.octave.third {
+    grid-area: third-octave;
+}
+.white-key {
+    background: whitesmoke;
+    width: 40px;
+    height: 130px;
+    border: 2.5px black solid;
+    border-right: 0px;
+}
+
+.white-key:nth-child(2)::before, .white-key:nth-child(3)::before, .white-key:nth-child(4)::before, .white-key:nth-child(6)::before,.white-key:nth-child(7)::before  {
+    content: "";
+    position: absolute;
+    background: black;
+    width: 25px;
+    height: 80px;
+    margin-left: -12.5px;
+}
+
+.octave:last-of-type:last-of-type{
+    border-right: 2.5px black solid;;
+}
+
+.octave.second {
+    display: none;
+}
+
+@media (min-width: 700px) {
+    .octave.second {
+        display: initial;
+        grid-area: second-octave;
+        display: flex;
+    }
+        .piano {
+            min-width: auto;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+            ". . random-buttons"
+            "first-octave second-octave third-octave";
+        }
+        .random-buttons {
+            grid-area: random-buttons;
+        }
+        .fa {
+            font-size: 40px;
+            margin-top: 5px;
+            margin-left: 15px;
+        }
+        h2 {
+            font-size: 45px;
+        }
+
+    }
