@@ -1,8 +1,2 @@
-# RWD-Projects
-A collection of simple projects taken either by freeCodeCamp or elsewhere on the internet. 
-
-| Name        | Description           | Inspiration  |
-| ------------- |:-------------:| -----:|
-| Picasso Painting      |  |  |
-| Balance Sheet      |   |    |
-| Basketball random quote machine |  |  |
+A collection of simple web projects.
+The inspiration comes either from freeCodeCamp or from somewhere else the internet. 
