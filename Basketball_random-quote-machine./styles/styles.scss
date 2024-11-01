@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Kalam&display=swap");
+
+$quoteFont: "Dancing Script", cursive;
+$authorFont: "Kalam", cursive;
+$newQuoteCol: rgb(58, 12, 23);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#section-introduction {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-width: 768px;
+  min-height: 625px;
+  padding: 20px;
+  background: rgb(221, 201, 178);
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
+
+  #title-FCC {
+    h1 {
+      text-align: center;
+      font-family: $authorFont;
+      font-size: 4.5em;
+      color: rgb(39, 23, 5);
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  #slideshow {
+    height: 20rem;
+    width: 70rem;
+    margin: 20px auto;
+    background: rgb(226, 181, 130);
+    border: 2px black solid;
+    box-shadow: 10px 10px 2px rgb(190, 166, 137);
+    padding: 20px;
+    display: flex;
+
+    .text-container {
+      width: 55%;
+      overflow: scroll;
+      margin-right: 20px;
+      animation: fading 6s infinite;
+
+      h2 {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 3.4em;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 1.2em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    }
+
+    .image-container {
+      background-image: url("../Players-Image/basketball-rim-height.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 45%;
+      animation: fading 6s infinite;
+    }
+  }
+
+  #btn-container {
+    position: absolute;
+    left: calc(50% - 7.5rem);
+    bottom: 50px;
+    width: 15rem;
+    height: 4rem;
+
+    a {
+      width: inherit;
+      height: inherit;
+    }
+
+    button {
+      width: inherit;
+      border-radius: 8px;
+      background-color: rgb(126, 118, 46);
+      font-family: monospace;
+      font-size: 2.6em;
+      border: none;
+      color: whitesmoke;
+      text-align: center;
+      padding: 15px;
+      cursor: pointer;
+
+      span {
+        position: relative;
+        display: block;
+      }
+
+      span::after {
+        content: "⇓⇓";
+        position: absolute;
+        opacity: 0;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.2em;
+        transition: top 0.2s ease-in;
+      }
+
+      &:hover {
+        padding-bottom: 40px;
+      }
+
+      &:hover span::after {
+        opacity: 1;
+        top: 75%;
+      }
+    }
+  }
+}
+
+#section-quote {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-width: 768px;
+  min-height: 625px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("../Players-Image/1Magic-johnson.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  #quote-box {
+    background-color: rgba(228, 210, 198, 0.86);
+    padding: 20px;
+    border-radius: 10px;
+    width: 800px;
+    color: rgb(36, 8, 3);
+
+    #text {
+      font-family: $quoteFont;
+      font-size: 3.2rem;
+      text-align: center;
+      padding: 0.75rem;
+      margin-bottom: 10px;
+    }
+
+    #author {
+      margin-bottom: 20px;
+      text-align: right;
+      margin-right: 100px;
+      font-family: $authorFont;
+      font-size: 2em;
+    }
+
+    #flex-box {
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+
+      #new-quote {
+        border: none;
+        font-family: $authorFont;
+        font-size: 1.8rem;
+        font-weight: bolder;
+        padding: 5px 10px;
+        margin-left: 5%;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 2px solid $newQuoteCol;
+        color: $newQuoteCol;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $newQuoteCol;
+          color: white;
+        }
+      }
+
+      .small-btn {
+        position: relative;
+        width: 65px;
+        height: 100%;
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+        border-radius: 10%;
+        background-color: transparent;
+
+        i {
+          font-size: 250%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      #pinter {
+        margin-right: 4rem;
+        color: #e60023;
+        border: 2px solid #e60023;
+        &:hover {
+          background-color: #e60023;
+          color: white;
+        }
+      }
+
+      #tweet-quote {
+        margin-right: 2rem;
+        color: #1da1f2;
+        border: 2px solid #1da1f2;
+        &:hover {
+          background-color: #1da1f2;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.icon-cont {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.158);
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 10%;
+  z-index: 10;
+  $menu-icon-color: rgb(155, 9, 9);
+  $bars-height: 5px;
+
+  .menu-icon {
+    position: relative;
+    top: 17px;
+    margin: 0 auto;
+    height: $bars-height;
+    width: 30px;
+    background: $menu-icon-color;
+    display: block;
+    border-radius: 20%;
+    &:before,
+    &:after {
+      transition: top 0.2s ease-in-out 0.1s;
+      position: absolute;
+      display: block;
+      content: "";
+      height: $bars-height;
+      width: 30px;
+      background-color: $menu-icon-color;
+      border-radius: 20%;
+    }
+    &:after {
+      top: 11px;
+    }
+    &:before {
+      top: -11px;
+    }
+  }
+}
+
+.open .menu-icon {
+  &:before,
+  &:after {
+    transition: top 0.25s ease-in-out, transform 0.35s ease-in-out 0.25s;
+    top: 0px;
+    left: -5px;
+    width: 40px;
+  }
+  background: transparent;
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes bounce {
+  from {
+    top: 8px;
+  }
+  80% {
+    top: 19px;
+  }
+  to {
+    top: 15px;
+  }
+}
+
+.bounce {
+  animation: bounce 900ms linear 300ms;
+  animation-fill-mode: forwards;
+}
+
+.shortcut-menu {
+  position: fixed;
+  right: 15px;
+  width: 270px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgba(255, 241, 218, 0.95);
+  box-shadow: 0 3px 10px rgb(161, 153, 141);
+  z-index: 5;
+
+  h3 {
+    font-size: 1.3em;
+    font-family: $authorFont;
+  }
+
+  ul {
+    list-style: none;
+    li {
+      padding: 9px 0px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .sc-des {
+    font-size: 0.95em;
+    width: 60%;
+  }
+
+  .sc-text {
+    width: 45%;
+    margin-left: 5px;
+    line-height: 1.5;
+
+    kbd {
+      background: white;
+      outline: black solid 1px;
+      padding: 0.2em 0.5em;
+      border-radius: 2px;
+    }
+  }
+}

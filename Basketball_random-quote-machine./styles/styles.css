@@ -1,0 +1,426 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Kalam&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#section-introduction {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-width: 768px;
+  min-height: 625px;
+  padding: 20px;
+  background: #ddc9b2;
+  overflow-x: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#section-introduction #title-FCC h1 {
+  text-align: center;
+  font-family: "Kalam", cursive;
+  font-size: 4.5em;
+  color: #271705;
+}
+
+#section-introduction #title-FCC h1 span {
+  display: none;
+}
+
+#section-introduction #slideshow {
+  height: 20rem;
+  width: 70rem;
+  margin: 20px auto;
+  background: #e2b582;
+  border: 2px black solid;
+  -webkit-box-shadow: 10px 10px 2px #bea689;
+          box-shadow: 10px 10px 2px #bea689;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#section-introduction #slideshow .text-container {
+  width: 55%;
+  overflow: scroll;
+  margin-right: 20px;
+  -webkit-animation: fading 6s infinite;
+          animation: fading 6s infinite;
+}
+
+#section-introduction #slideshow .text-container h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3.4em;
+  margin-bottom: 15px;
+}
+
+#section-introduction #slideshow .text-container p {
+  font-size: 1.2em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#section-introduction #slideshow .image-container {
+  background-image: url("../Players-Image/basketball-rim-height.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 45%;
+  -webkit-animation: fading 6s infinite;
+          animation: fading 6s infinite;
+}
+
+#section-introduction #btn-container {
+  position: absolute;
+  left: calc(50% - 7.5rem);
+  bottom: 50px;
+  width: 15rem;
+  height: 4rem;
+}
+
+#section-introduction #btn-container a {
+  width: inherit;
+  height: inherit;
+}
+
+#section-introduction #btn-container button {
+  width: inherit;
+  border-radius: 8px;
+  background-color: #7e762e;
+  font-family: monospace;
+  font-size: 2.6em;
+  border: none;
+  color: whitesmoke;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+}
+
+#section-introduction #btn-container button span {
+  position: relative;
+  display: block;
+}
+
+#section-introduction #btn-container button span::after {
+  content: "⇓⇓";
+  position: absolute;
+  opacity: 0;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1.2em;
+  -webkit-transition: top 0.2s ease-in;
+  transition: top 0.2s ease-in;
+}
+
+#section-introduction #btn-container button:hover {
+  padding-bottom: 40px;
+}
+
+#section-introduction #btn-container button:hover span::after {
+  opacity: 1;
+  top: 75%;
+}
+
+#section-quote {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-width: 768px;
+  min-height: 625px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../Players-Image/1Magic-johnson.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#section-quote #quote-box {
+  background-color: rgba(228, 210, 198, 0.86);
+  padding: 20px;
+  border-radius: 10px;
+  width: 800px;
+  color: #240803;
+}
+
+#section-quote #quote-box #text {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.2rem;
+  text-align: center;
+  padding: 0.75rem;
+  margin-bottom: 10px;
+}
+
+#section-quote #quote-box #author {
+  margin-bottom: 20px;
+  text-align: right;
+  margin-right: 100px;
+  font-family: "Kalam", cursive;
+  font-size: 2em;
+}
+
+#section-quote #quote-box #flex-box {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#section-quote #quote-box #flex-box #new-quote {
+  border: none;
+  font-family: "Kalam", cursive;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  padding: 5px 10px;
+  margin-left: 5%;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid #3a0c17;
+  color: #3a0c17;
+  cursor: pointer;
+}
+
+#section-quote #quote-box #flex-box #new-quote:hover {
+  background-color: #3a0c17;
+  color: white;
+}
+
+#section-quote #quote-box #flex-box .small-btn {
+  position: relative;
+  width: 65px;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10%;
+  background-color: transparent;
+}
+
+#section-quote #quote-box #flex-box .small-btn i {
+  font-size: 250%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#section-quote #quote-box #flex-box #pinter {
+  margin-right: 4rem;
+  color: #e60023;
+  border: 2px solid #e60023;
+}
+
+#section-quote #quote-box #flex-box #pinter:hover {
+  background-color: #e60023;
+  color: white;
+}
+
+#section-quote #quote-box #flex-box #tweet-quote {
+  margin-right: 2rem;
+  color: #1da1f2;
+  border: 2px solid #1da1f2;
+}
+
+#section-quote #quote-box #flex-box #tweet-quote:hover {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.icon-cont {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.158);
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 10%;
+  z-index: 10;
+}
+
+.icon-cont .menu-icon {
+  position: relative;
+  top: 17px;
+  margin: 0 auto;
+  height: 5px;
+  width: 30px;
+  background: #9b0909;
+  display: block;
+  border-radius: 20%;
+}
+
+.icon-cont .menu-icon:before, .icon-cont .menu-icon:after {
+  -webkit-transition: top 0.2s ease-in-out 0.1s;
+  transition: top 0.2s ease-in-out 0.1s;
+  position: absolute;
+  display: block;
+  content: "";
+  height: 5px;
+  width: 30px;
+  background-color: #9b0909;
+  border-radius: 20%;
+}
+
+.icon-cont .menu-icon:after {
+  top: 11px;
+}
+
+.icon-cont .menu-icon:before {
+  top: -11px;
+}
+
+.open .menu-icon {
+  background: transparent;
+}
+
+.open .menu-icon:before, .open .menu-icon:after {
+  -webkit-transition: top 0.25s ease-in-out, -webkit-transform 0.35s ease-in-out 0.25s;
+  transition: top 0.25s ease-in-out, -webkit-transform 0.35s ease-in-out 0.25s;
+  transition: top 0.25s ease-in-out, transform 0.35s ease-in-out 0.25s;
+  transition: top 0.25s ease-in-out, transform 0.35s ease-in-out 0.25s, -webkit-transform 0.35s ease-in-out 0.25s;
+  top: 0px;
+  left: -5px;
+  width: 40px;
+}
+
+.open .menu-icon:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.open .menu-icon:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+@-webkit-keyframes bounce {
+  from {
+    top: 8px;
+  }
+  80% {
+    top: 19px;
+  }
+  to {
+    top: 15px;
+  }
+}
+
+@keyframes bounce {
+  from {
+    top: 8px;
+  }
+  80% {
+    top: 19px;
+  }
+  to {
+    top: 15px;
+  }
+}
+
+.bounce {
+  -webkit-animation: bounce 900ms linear 300ms;
+          animation: bounce 900ms linear 300ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.shortcut-menu {
+  position: fixed;
+  right: 15px;
+  width: 270px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgba(255, 241, 218, 0.95);
+  -webkit-box-shadow: 0 3px 10px #a1998d;
+          box-shadow: 0 3px 10px #a1998d;
+  z-index: 5;
+}
+
+.shortcut-menu h3 {
+  font-size: 1.3em;
+  font-family: "Kalam", cursive;
+}
+
+.shortcut-menu ul {
+  list-style: none;
+}
+
+.shortcut-menu ul li {
+  padding: 9px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shortcut-menu .sc-des {
+  font-size: 0.95em;
+  width: 60%;
+}
+
+.shortcut-menu .sc-text {
+  width: 45%;
+  margin-left: 5px;
+  line-height: 1.5;
+}
+
+.shortcut-menu .sc-text kbd {
+  background: white;
+  outline: black solid 1px;
+  padding: 0.2em 0.5em;
+  border-radius: 2px;
+}
+/*# sourceMappingURL=styles.css.map */
